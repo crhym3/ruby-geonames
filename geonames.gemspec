@@ -17,7 +17,7 @@ SPEC = Gem::Specification.new do |s|
   s.add_development_dependency('rake')
   s.add_development_dependency('rspec')
   
-  s.files = Dir.glob("{lib,spec}/**/*") + %w(Rakefile README)
+  s.files = Dir.glob("{lib,spec}/**/*") + %w(Rakefile README.rdoc)
   Dir.glob('**/*')
   
   s.require_path = "lib" 
