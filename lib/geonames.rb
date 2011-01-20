@@ -21,7 +21,7 @@ require 'net/http'
 require 'rexml/document'
 
 module Geonames
-  VERSION         = "0.2.2"
+  VERSION         = "0.2.3"
   GEONAMES_SERVER = "http://ws.geonames.org"
   USER_AGENT      = "geonames ruby webservice client #{VERSION}"
 end
