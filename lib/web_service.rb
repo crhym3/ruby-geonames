@@ -341,7 +341,8 @@ module Geonames
     def self.fetch_results(url)
       uri = URI.parse(url)
       req = Net::HTTP::Get.new(uri.path + '?' + uri.query)
-      Net::HTTP.start(uri.host, uri.port) { |http| 
+      
+      Net::HTTP::Proxy(Geonames.proxy_host, Geonames.proxy_port).start(uri.host, uri.port) { |http| 
         http.request(req) 
       }
     end

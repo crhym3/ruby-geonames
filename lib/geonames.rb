@@ -24,6 +24,22 @@ module Geonames
   VERSION         = "0.2.3"
   GEONAMES_SERVER = "http://ws.geonames.org"
   USER_AGENT      = "geonames ruby webservice client #{VERSION}"
+  
+  def self.proxy_host
+    @@proxy_host
+  end
+  def self.proxy_host=(phost)
+    @@proxy_host = phost
+  end
+  self.proxy_host = nil
+  
+  def self.proxy_port
+    @@proxy_port
+  end
+  def self.proxy_port=(pport)
+    @@proxy_port = pport
+  end
+  proxy_port = nil
 end
 
 require 'web_service'
