@@ -20,6 +20,12 @@ require 'cgi'
 require 'net/http'
 require 'rexml/document'
 
+module Geonames
+  VERSION         = "0.2.2"
+  GEONAMES_SERVER = "http://ws.geonames.org"
+  USER_AGENT      = "geonames ruby webservice client #{VERSION}"
+end
+
 require 'web_service'
 require 'toponym'
 require 'toponym_search_result'
@@ -30,11 +36,4 @@ require 'timezone'
 require 'country_subdivision'
 require 'wikipedia_article'
 require 'intersection'
-
-module Geonames
-  
-  GEONAMES_SERVER = "http://ws.geonames.org"
-  USER_AGENT = "geonames ruby webservice client 0.1"
-  
-end
 
